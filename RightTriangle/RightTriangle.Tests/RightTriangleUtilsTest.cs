@@ -62,7 +62,7 @@ namespace RightTriangle.Tests
         }
 
         // Проверки правильности вычисления
-        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
         public void CalculateSquare_CorrectCalc1()
         {
             double a = 3;
@@ -73,7 +73,7 @@ namespace RightTriangle.Tests
             Assert.AreEqual(square, result);
         }
 
-        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
         public void CalculateSquare_CorrectCalc2()
         {
             double a = 15;
@@ -84,7 +84,7 @@ namespace RightTriangle.Tests
             Assert.AreEqual(square, result);
         }
 
-        [ExpectedException(typeof(ArgumentException))]
+        [TestMethod]
         public void CalculateSquare_CorrectCalc3()
         {
             double a = 9;
