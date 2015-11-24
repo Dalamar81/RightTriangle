@@ -16,6 +16,12 @@ namespace RightTriangle
         /// <param name="c">Длина стороны c</param>
         public static double CalculateSquare(double a, double b, double c)
         {
+            if (a <= 0)
+                throw new ArgumentOutOfRangeException("a");
+            if (b <= 0)
+                throw new ArgumentOutOfRangeException("b");
+            if (c <= 0)
+                throw new ArgumentOutOfRangeException("c");
             throw new NotImplementedException();
         }
     }
