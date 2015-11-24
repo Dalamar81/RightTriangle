@@ -88,7 +88,7 @@ namespace RightTriangle.Tests
         public void CalculateSquare_CorrectCalc3()
         {
             double a = 9;
-            double b = 10.295630140987;
+            double b = Math.Sqrt(106);
             double c = 5;
             double square = 22.5;
             double result = RightTriangleUtils.CalculateSquare(a, b, c);
