@@ -23,12 +23,11 @@ namespace RightTriangle
             if (c <= 0)
                 throw new ArgumentOutOfRangeException("c");
 
-            // сортируем параметры
-            double tmp;
-            if (a > b) { tmp = a; a = b; b = tmp; }
-            if (b > c) { tmp = b; b = c; c = tmp; }
-            if (a > b) { tmp = a; a = b; b = tmp; }
-            // теперь в a и b - катеты, в c - гипотенуза
+            // помещаем наибольшее значение в "c":
+            double swap;
+            if (a > c) { swap = a; a = c; c = swap; }
+            if (b > c) { swap = b; b = c; c = swap; }
+            // теперь a и b - катеты, c - гипотенуза
 
             // проверяем, что треугольник - прямоугольный; но ограничим точность для избежания машинного нуля
             if (Math.Abs(c * c - a * a - b * b) > 0.0000000000001)
